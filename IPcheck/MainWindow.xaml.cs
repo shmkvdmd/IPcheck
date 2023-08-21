@@ -11,5 +11,9 @@ namespace IPcheck
             InitializeComponent();
         }
 
+        private void btnGetIp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -4,15 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPcheck"
+        xmlns:userControls="clr-namespace:IPcheck.View.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="275">
     <Grid>
-        <Label Name ="labelInfo" Content ="Hi"  FontSize="20"/>
-        <Button Name ="btnGetIP" Height="35" Width="100"
-                VerticalAlignment="Center" HorizontalAlignment="Center" 
-                Content="Get IP" FontSize="20" Click="btnGetIP_Click" Margin="0,150,0,0"/>
-        <TextBox Name ="adress" Height="35" Width="100"
-                 VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0,240,0,0"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <userControls:MenuBar/>
+        <Grid Grid.Row="2">
+            <userControls:InfoBar/>
+        </Grid>
     </Grid>
 </Window>

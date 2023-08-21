@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="IPcheck.View.UserControls.InfoBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IPcheck.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="275">
+    <Grid Margin="0,-2,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="labelInfo" Width="200" FontSize="14" />
+        <Grid Grid.Column="1">
+            <Button Name="refreshBtn" Content="R" Width="30" Margin="10,5,10,5" Click="refreshBtn_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

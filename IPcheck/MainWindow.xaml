@@ -9,11 +9,30 @@
         Title="MainWindow" Height="400" Width="275">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <userControls:MenuBar/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Name ="btnGetIp" Width="75" Margin="5" Content="Get IP" FontSize="16" Click="btnGetIp_Click"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <userControls:ClearableTextBox Margin="5"/>
+                </Grid>
+            </Grid>
+        </Grid>
         <Grid Grid.Row="2">
             <userControls:InfoBar/>
         </Grid>

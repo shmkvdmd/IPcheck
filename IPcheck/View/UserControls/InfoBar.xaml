@@ -5,15 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IPcheck.View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="275">
-    <Grid Margin="0,-2,0,0">
+             d:DesignHeight="30">
+    <Grid Background="#FFEDEDED">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width ="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Name="labelInfo" Width="200" FontSize="14" />
+        <Label Name="labelInfo" FontSize="14" />
         <Grid Grid.Column="1">
-            <Button Name="refreshBtn" Content="R" Width="30" Margin="10,5,10,5" Click="refreshBtn_Click"/>
+            <Button Name="refreshBtn" Content="Refresh" Margin="3" FontSize="14" Click="refreshBtn_Click"/>
         </Grid>
     </Grid>
 </UserControl>

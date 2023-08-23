@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:IPcheck"
         xmlns:userControls="clr-namespace:IPcheck.View.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="400">
+        Title=":)" Height="480" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>

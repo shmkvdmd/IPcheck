@@ -23,8 +23,16 @@ namespace IPcheck.View.UserControls
         public ClearableTextBox()
         {
             InitializeComponent();
+            DataContext = this;
+        }
+        public string InputText
+        {
+            get { return (string)GetValue(InputTextProperty); }
+            set { SetValue(InputTextProperty, value); }
         }
 
+        public static readonly DependencyProperty InputTextProperty =
+            DependencyProperty.Register("InputText", typeof(string), typeof(ClearableTextBox), new PropertyMetadata(""));
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             txtInput.Clear();

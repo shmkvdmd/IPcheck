@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <!--Menu Bar-->
-        <userControls:MenuBar/>
+        <userControls:MenuBar x:Name="menuBar"/>
 
 
         <Grid Grid.Row="1">
@@ -59,6 +59,9 @@
                     <Label Name="labelTimezone" FontSize="16"/>
                     <Label Name="labelConnection" FontSize="16" Margin="0,45,0,0"/>
                 </Grid>
+                
+                
+                <!--Map-->
                 <Grid Grid.Row="2" Background="White" Height="Auto">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -68,10 +71,11 @@
                         <Border Name="conCheck"/>
                     </Grid>
                     <Grid Grid.Row="0">
-                        <m:Map x:Name="myMap" Margin="5"
+                        <m:Map x:Name="myMap" Margin="5,5,5,1" Visibility="Hidden"
                                CredentialsProvider="AsNEWg3kjqEIDJggwFm8AXE9JE_S2OrY7iRaWnySzFH1Je0zo4YUzeTb5rP49DEf" Mode="AerialWithLabels"/>
                     </Grid>
                 </Grid>
+                
             </Grid>
         </Grid>
 

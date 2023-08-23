@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 
@@ -16,7 +17,7 @@ namespace IPcheck.View.UserControls
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
     }
 }

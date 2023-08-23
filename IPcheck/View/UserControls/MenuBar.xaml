@@ -1,4 +1,5 @@
 ﻿<UserControl x:Class="IPcheck.View.UserControls.MenuBar"
+             x:Name="menuBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,10 +15,10 @@
             <MenuItem Header="File" FontSize="16">
                 <MenuItem Header="Exit" Click="MenuItem_Click"/>
             </MenuItem>
-            <MenuItem Header="Options" FontSize="16">
-                <MenuItem Header="Timezone" IsCheckable="True" StaysOpenOnClick="True"/>
-                <MenuItem Header="Connection" IsCheckable="True" StaysOpenOnClick="True"/>
-                <MenuItem Header="Show Latitude/Longtitude" IsCheckable="True" StaysOpenOnClick="True"/>
+            <MenuItem Name="options" Header="Options" FontSize="16">
+                <MenuItem Name="timezone" Header="Timezone" IsCheckable="True" StaysOpenOnClick="True"/>
+                <MenuItem Name="connection" Header="Connection" IsCheckable="True" StaysOpenOnClick="True"/>
+                <MenuItem Name="cords" Header="Show Latitude/Longtitude" IsCheckable="True" StaysOpenOnClick="True"/>
             </MenuItem>
                 
         </Menu>

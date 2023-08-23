@@ -2,37 +2,80 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IPcheck"
         xmlns:userControls="clr-namespace:IPcheck.View.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="275">
+        Title="MainWindow" Height="480" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
+
+        <!--Menu Bar-->
         <userControls:MenuBar/>
+
+
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="170"/>
                 </Grid.ColumnDefinitions>
+
+                <!--Row with textbox-->
                 <Grid Grid.Column="0">
-                    <Button Name ="btnGetIp" Width="75" Margin="5" Content="Get IP" FontSize="16" Click="btnGetIp_Click"/>
+                    <Button Name ="btnGetIp" Width="Auto" Margin="5" Content="Get" FontSize="16" Click="btnGetIp_Click" Foreground="Black" Background="{x:Null}">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <userControls:ClearableTextBox Margin="5"/>
+                    <userControls:ClearableTextBox x:Name="clearableTextBox" Margin="5" Width="Auto"/>
+                </Grid>
+
+                <!--info labels-->
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="77"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="White">
+                    <Label Name="labelCountryCity" FontSize="16"/>
+                </Grid>
+                <Grid Grid.Row="1" Background="White">
+                    <Label Name="labelTimezone" FontSize="16"/>
+                    <Label Name="labelConnection" FontSize="16" Margin="0,45,0,0"/>
+                </Grid>
+                <Grid Grid.Row="2" Background="White" Height="Auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+                        <Border Name="conCheck"/>
+                    </Grid>
+                    <Grid Grid.Row="0">
+                        <m:Map x:Name="myMap" Margin="5"
+                               CredentialsProvider="AsNEWg3kjqEIDJggwFm8AXE9JE_S2OrY7iRaWnySzFH1Je0zo4YUzeTb5rP49DEf" Mode="AerialWithLabels"/>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
+
+        <!--Info Bar-->
         <Grid Grid.Row="2">
             <userControls:InfoBar/>
         </Grid>

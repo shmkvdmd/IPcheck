@@ -12,9 +12,14 @@
         </Grid.RowDefinitions>
         <Menu>
             <MenuItem Header="File" FontSize="16">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="MenuItem_Click"/>
             </MenuItem>
-            <MenuItem Header="Options" FontSize="16"/>
+            <MenuItem Header="Options" FontSize="16">
+                <MenuItem Header="Timezone" IsCheckable="True" StaysOpenOnClick="True"/>
+                <MenuItem Header="Connection" IsCheckable="True" StaysOpenOnClick="True"/>
+                <MenuItem Header="Show Latitude/Longtitude" IsCheckable="True" StaysOpenOnClick="True"/>
+            </MenuItem>
+                
         </Menu>
     </Grid>
 </UserControl>

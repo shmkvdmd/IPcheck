@@ -9,11 +9,17 @@
     <Grid Background="#FFEDEDED">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
-        <Label Name="labelInfo" FontSize="14" />
+        <Label Name="labelInfo" FontSize="14"/>
         <Grid Grid.Column="1">
-            <Button Name="refreshBtn" Content="Refresh" Margin="3" FontSize="14" Click="refreshBtn_Click"/>
+            <Button Name="refreshBtn" Content="Refresh" Margin="3" FontSize="14" Click="refreshBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            </Button>
         </Grid>
     </Grid>
 </UserControl>
